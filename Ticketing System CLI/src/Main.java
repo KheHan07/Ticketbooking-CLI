@@ -17,9 +17,8 @@ public class Main {
         int ticketReleaseRate = 0;
         int customerRetrievalRate = 0;
         int maxTicketCapacity = 0;
-
         while (running) {
-            System.out.println("Enter command (configure/start/'st' to stop/status/save/exit):");
+            System.out.println("Please enter a command (configure, start, stop [st], view status [status], save configuration [save], or exit):");
             String command = scanner.next().toLowerCase();
 
             switch (command) {
@@ -36,7 +35,6 @@ public class Main {
                             customerRetrievalRate = scanner.nextInt();
                             System.out.println("Enter maximum ticket capacity:");
                             maxTicketCapacity = scanner.nextInt();
-
                             if (totalTickets > 0 && ticketReleaseRate > 0 && customerRetrievalRate > 0 && maxTicketCapacity > 0) {
                                 validInput = true;
                             } else {
